@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -54,6 +55,11 @@ public class MtsTest {
         input2.sendKeys("1");
         WebElement input3 = driver.findElement(By.xpath("//form[@class='pay-form opened']//button[@class='button button__default ']"));
         input3.click();
+    }
+
+    @AfterTest
+    public void afterTest(){
+        driver.quit();
     }
 
 }
