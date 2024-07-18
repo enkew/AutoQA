@@ -42,9 +42,9 @@ public class MtsTest {
 
     @Test(priority = 3)
     public void checkLinkWork() {
-        WebElement link = driver.findElement(By.xpath("//a[contains(@href,'/help/poryadok-oplaty')]"));
+        WebElement link = driver.findElement(By.xpath("//a[contains(text(), 'Подробнее о сервисе')]"));
         link.click();
-        driver.get("https://www.mts.by/");
+        driver.navigate().back();
     }
 
     @Test(priority = 4)
