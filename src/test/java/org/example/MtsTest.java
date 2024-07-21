@@ -43,6 +43,7 @@ public class MtsTest {
     @Test(priority = 3)
     public void checkLinkWork() {
         WebElement link = driver.findElement(By.xpath("//a[contains(text(), 'Подробнее о сервисе')]"));
+        Assert.assertEquals(link.getText(),"Подробнее о сервисе");
         link.click();
         driver.navigate().back();
     }
