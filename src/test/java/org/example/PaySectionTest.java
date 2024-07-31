@@ -9,6 +9,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
 import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -56,7 +57,7 @@ public class PaySectionTest {
         try {
             String actualPlaceholder = "";
             switch (id) {
-                case  ("connection-phone"):
+                case ("connection-phone"):
                     actualPlaceholder = mtsHomePage.getConnectionPhonePlaceholder();
                     break;
                 case ("connection-sum"):
@@ -65,7 +66,7 @@ public class PaySectionTest {
                 case ("connection-email"):
                     actualPlaceholder = mtsHomePage.getConnectionEmailPlaceholder();
                     break;
-                case  ("internet-phone"):
+                case ("internet-phone"):
                     actualPlaceholder = mtsHomePage.getInternetPhonePlaceholder();
                     break;
                 case ("internet-sum"):
@@ -74,7 +75,7 @@ public class PaySectionTest {
                 case ("internet-email"):
                     actualPlaceholder = mtsHomePage.getInternetEmailPlaceholder();
                     break;
-                case  ("score-instalment"):
+                case ("score-instalment"):
                     actualPlaceholder = mtsHomePage.getInstalmentScorePlaceholder();
                     break;
                 case ("instalment-sum"):
@@ -83,7 +84,7 @@ public class PaySectionTest {
                 case ("instalment-email"):
                     actualPlaceholder = mtsHomePage.getInstalmentEmailPlaceholder();
                     break;
-                case  ("score-arrears"):
+                case ("score-arrears"):
                     actualPlaceholder = mtsHomePage.getArrearsScorePlaceholder();
                     break;
                 case ("arrears-sum"):
